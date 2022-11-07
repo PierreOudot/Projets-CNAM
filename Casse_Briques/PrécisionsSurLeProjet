@@ -1,0 +1,27 @@
+
+Voici quelques précisions et explications sur certains de mes choix:
+
+    + En montant les morceaux du projet, je suis passé par mégarde sous JAVA 16 (openSDK-15).
+
+    + La complexité de mes algorithmes, notamment pour la gestion des collisions avec le périmètre de la balle sur les
+    briques et la barres, n'est pas optimisée. Cela m'a pris du temps et j'ai voulu aller jusqu'au bout de mon idée.
+    Ceci génère du lag, et je me demande si l'utilisation, pour créer le mouvement, de la méthode repaint au lieu de
+    superposer les couches d'éléments grpahiques ne me permettrait pas de fluidifier tout ça en attendant d'améliorer
+    mes algos de gestion des collisions.
+
+    + Dans certains cas, l'utilisation des accesseurs dans des methodes de la même classe est inutile (la gestion de
+    l'audio par ex, ou les methodes de collisions avec la barre), je l'ai fait machinalement et n'ai pas le temps de
+    tout modifier.
+    D'autres (comme majCoordoCentre, collisios avec la barre dans balle) étaient pour fonctionner avec l'arrayList
+    corespondant (multiballes->pas implémenté) et la methode Foreach des arrayLists (que j'ai retiré pour la balle, ici unique.)
+    pour que ça n'affecte que l'objet concerné.
+
+    + Vis à vis des bouttons qui ne s'affichent pas comme je voudrais, j'ai trouvé des éléments de réponse au problème
+     et de solutions en me confrontant au problème (comme la gestion du gridLayout) que j'implémenterai plus tard (comme les bonus...).
+
+    + En changeant le dossier de place, j'ai parfois eu à redéfinir le chemin des pistes audio. Cela aurait pu être évité
+    en les plaçant à la racine du dossier com/company. J'ai créé un dossier dans le SRC pour n'avoir que ce dernier à rendre.
+
+    + Les effets sonores proviennent du site LaSonothèque (libres de droits), et la boucle "Brick and Morty" à été composée
+    pour l'occasion.
+
